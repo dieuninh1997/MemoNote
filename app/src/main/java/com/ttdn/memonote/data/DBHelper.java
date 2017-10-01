@@ -121,11 +121,12 @@ public class DBHelper extends SQLiteOpenHelper {
 
         // db.close();
         Log.d(TAG, "result: " + result);
+        db.close();
         return false;
     }
 
-    public void insertNote(Note note){
-        SQLiteDatabase database = this.getWritableDatabase();
+    public boolean insertNote(Note note){
+        SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(COL_TITLE, note.getTitle());
         values.put(COL_CONTENT, note.getContent());
@@ -133,8 +134,15 @@ public class DBHelper extends SQLiteOpenHelper {
         values.put(COL_COLOR, note.getColor());
         values.put(COL_IMAGE_LINK, note.picture);
         values.put(COL_ALARM, note.getAlarm());
-        database.insert(TABLE_NAME, null, values);
-        database.close();
+        long result = db.insert(TABLE_NAME, null, values);
+        if (result != -1)
+            return true;
+
+        // db.close();
+        Log.d(TAG, "result: " + result);
+        db.close();
+        return false;
+
     }
 
     //update
@@ -153,7 +161,7 @@ public class DBHelper extends SQLiteOpenHelper {
         db.close();
         return false;
     }
-    public void updateNote(int id, Note note) {
+    public boolean updateNote(int id, Note note) {
         SQLiteDatabase database = getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(COL_TITLE, note.getTitle());
@@ -163,8 +171,12 @@ public class DBHelper extends SQLiteOpenHelper {
         values.put(COL_IMAGE_LINK, note.picture);
         values.put(COL_ALARM, note.getAlarm());
         database.insert(TABLE_NAME, null, values);
-        database.update(TABLE_NAME, values, COL_ID + " = " + id, null);
+        if (database.update(TABLE_NAME, values, COL_ID + " = " + id, null) > 0) {
+            Log.d(TAG, " -updateData, true");
+            return true;
+        }
         database.close();
+        return false;
     }
     //delete
     public void deleteData(int id) {

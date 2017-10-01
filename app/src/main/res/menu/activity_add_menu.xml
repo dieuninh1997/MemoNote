@@ -14,7 +14,7 @@
     <item
         android:title="Photos"
         android:id="@+id/photos"
-        android:icon="@drawable/ic_image_black_24dp"
+        android:icon="@drawable/ic_image_white_24dp"
         app:showAsAction="ifRoom"
         android:orderInCategory="1"
         android:menuCategory="secondary"

@@ -70,4 +70,9 @@
     <style name="TitleDialogTextStyle" parent="Base.DialogWindowTitle.AppCompat">
         <item name="android:textColor">@android:color/black</item>
     </style>
+
+    <style name="Dialog" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
 </resources>

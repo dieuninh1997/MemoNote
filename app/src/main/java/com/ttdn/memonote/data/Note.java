@@ -71,17 +71,16 @@ public class Note  implements Serializable{
         this.color = color;
     }
     public Note(String id, String title, String content,
-                String date, String color, String picture) {
+                String date, String color,String alarm, String picture) {
         this.id = id;
         this.title = title;
         this.content = content;
         this.date = date;
         this.color = color;
+        this.alarm=alarm;
         this.picture=picture;
     }
-    public Note(String id, String title, String content,
-                String date, String color, String alarm,String picture) {
-        this.id = id;
+    public Note(String title, String content,String date, String color, String alarm,String picture) {
         this.title = title;
         this.content = content;
         this.date = date;

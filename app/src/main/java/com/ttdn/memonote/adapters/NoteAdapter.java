@@ -69,13 +69,13 @@ public class NoteAdapter
             holder.card_view_item.setCardBackgroundColor(Integer.parseInt(note.getColor()));
 
 
-            if(note.alarm.equals(""))
+            /*if(note.alarm.equals(""))
             {
                 holder.img_alarm.setVisibility(View.GONE);
             }else
             {
                 holder.img_alarm.setVisibility(View.VISIBLE);
-            }
+            }*/
         }
     }
 

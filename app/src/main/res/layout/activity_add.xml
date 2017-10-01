@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.AddActivity">
-
     <include
         android:id="@+id/add_activity_toolbar"
         layout="@layout/custom_toolbar"
@@ -18,51 +17,55 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/add_activity_toolbar"
         android:orientation="vertical">
-
-        <ScrollView
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
-            <RelativeLayout
+            <EditText
+                android:id="@+id/add_activity_title"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:background="@android:color/transparent"
+                android:gravity="top"
+                android:hint="@string/hint_title"
+                android:maxLength="24"
+                android:maxLines="1"
+                android:paddingTop="@dimen/dimen_25dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_20sp"
+                android:textStyle="bold"
+                android:transitionName="transTitle" />
 
-                <EditText
-                    android:id="@+id/add_activity_title"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:layout_marginLeft="@dimen/dimen_20dp"
-                    android:layout_marginRight="@dimen/dimen_20dp"
-                    android:background="@android:color/transparent"
-                    android:gravity="top"
-                    android:hint="@string/hint_title"
-                    android:maxLength="24"
-                    android:maxLines="1"
-                    android:paddingTop="@dimen/dimen_25dp"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/dimen_20sp"
-                    android:textStyle="bold"
-                    android:transitionName="transTitle" />
+            <EditText
+                android:id="@+id/add_activity_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/add_activity_title"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/dimen_35dp"
+                android:background="@android:color/transparent"
+                android:gravity="top"
+                android:hint="@string/hint"
+                android:paddingBottom="@dimen/dimen_35dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_16sp"
+                android:transitionName="transContent" />
+            <ListView
+                android:layout_below="@+id/add_activity_content"
+                android:id="@+id/grv_picture"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/dimen_35dp"
+                android:visibility="visible"></ListView>
 
-                <EditText
-                    android:id="@+id/add_activity_content"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/add_activity_title"
-                    android:layout_marginLeft="@dimen/dimen_20dp"
-                    android:layout_marginRight="@dimen/dimen_20dp"
-                    android:layout_marginTop="@dimen/dimen_35dp"
-                    android:background="@android:color/transparent"
-                    android:gravity="top"
-                    android:hint="@string/hint"
-                    android:paddingBottom="@dimen/dimen_35dp"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/dimen_16sp"
-                    android:transitionName="transContent" />
-            </RelativeLayout>
-        </ScrollView>
+        </RelativeLayout>
 
 
     </LinearLayout>
+
 </RelativeLayout>
