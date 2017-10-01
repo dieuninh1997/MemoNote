@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">MemoNote</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="demo">demo</string>
+    <string name="date_demo">dd-MM-yyy hh:mm</string>
+    <string name="hint">Enter content</string>
+    <string name="hint_title">Enter title</string>
+    <string name="ok">OK</string>
+    <string name="cancel">CANCLE</string>
+    <string name="discard_changes">Discard changes?</string>
+    <string name="delete_prompt">Do you want to delete?</string>
+    <string name="move_to_trash">Move to trash</string>
+    <string name="clipboard">Copied to clipboard</string>
+    <string name="sorting">Sorting</string>
+    <string name="restore">RESTORE</string>
+    <string name="restoreMessage">Click Restore to restore the note</string>
+    <string name="deleted">Deleted note</string>
+    <string name="restored">Restord note</string>
+    <string name="clear_prompt">\"This action cannot be undone\"</string>
+    <string name="about_app">MemoNote is a simple material design application</string>
+    <string name="notes">Notes</string>
+    <string name="delete">DELETE</string>
+    <string name="recording">Recording</string>
+    <string name="click_to_stop">Click to stop</string>
+</resources>

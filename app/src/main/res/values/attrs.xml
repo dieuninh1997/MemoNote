@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="themedMenuDrawableAllNotes" format="reference" />
+    <attr name="themedMenuDrawableSettings" format="reference" />
+    <attr name="themedMenuDrawableDelete" format="reference" />
+    <attr name="themedMenuDrawableInfo" format="reference" />
+</resources>

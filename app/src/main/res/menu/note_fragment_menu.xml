@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.toolbar.MainActivity">
+
+    <item android:id="@+id/changeListGrid"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="changeListGrid"
+        app:showAsAction="always"
+        android:orderInCategory="2"
+        android:menuCategory="secondary"/>
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:iconifiedByDefault="true"
+        android:orderInCategory="1"
+        android:title="Search"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="collapseActionView|ifRoom" />
+</menu>
